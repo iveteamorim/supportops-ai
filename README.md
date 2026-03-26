@@ -1,69 +1,140 @@
 # SupportOps AI
 
-AI-powered support workspace for prioritizing tickets, generating suggested replies, and reducing handling time for customer support teams.
+AI-powered copilot for customer support teams.
+
+SupportOps AI helps support teams prioritize tickets, generate suggested replies, surface policy references, and reduce handling time across billing, access, and plan-change workflows.
+
+## Live Links
+
+- Live Demo: https://supportops-ai-phi.vercel.app
+- GitHub: https://github.com/iveteamorim/supportops-ai
 
 ## Overview
 
-SupportOps AI is a support operations dashboard designed for teams handling billing, access, and plan-change requests. It combines ticket triage, AI summaries, suggested replies, and escalation workflows in a single interface.
+SupportOps AI is a support operations workspace designed for teams handling high-volume customer issues. It combines ticket triage, AI summaries, suggested replies, escalation workflows, and policy context in a single interface.
 
 ## Business Impact
 
-- Reduce support handling time by 50–70%
+Designed to:
+
+- Reduce support handling time by 50-70%
 - Improve response consistency across agents
-- Prevent revenue loss from unanswered or delayed tickets
+- Help teams resolve urgent tickets faster
+- Reduce operational load on repetitive support work
+
+## Product Walkthrough
+
+1. Open `Dashboard` to review urgent ticket volume, queue pressure, and support workload.
+2. Open `Inbox` to see AI-prioritized tickets sorted by urgency, wait time, and SLA risk.
+3. Open a ticket to review the conversation thread, AI summary, suggested reply, and knowledge references.
+4. Use the copilot actions to simulate assignment, escalation, close actions, and AI feedback.
 
 ## Core Features
 
 - AI-prioritized ticket inbox
-- Ticket detail workspace with customer context
-- Suggested replies with confidence scoring
-- Escalation and close actions
-- Dashboard with support workload metrics
+- Ticket detail workspace with customer context and message thread
+- Suggested replies with confidence indicator
+- Escalation, assignment, and close actions
+- Support workload dashboard
 - Knowledge reference panel for policy-driven responses
-
-## Tech Stack
-
-- Next.js (App Router)
-- TypeScript
-- React
-- Tailwind CSS
-- Vercel-ready architecture
+- Mock AI endpoints for summary and reply workflows
 
 ## Architecture
 
-- Frontend: Next.js UI (dashboard, inbox, ticket workspace)
-- Backend: API routes for ticket handling and AI orchestration
-- Data model: tickets, messages, customers
-- AI layer:
-  - summarization
-  - suggested replies
-  - ticket prioritization
+- Frontend: Next.js App Router
+- Backend: Next.js Route Handlers
+- Data model: local ticket, message, and customer dataset
+- Deployment target: Vercel
 
-## Screens
+Core flow:
+
+- Ticket enters queue
+- Support engine classifies priority and sentiment
+- AI summary and reply are generated
+- Agent reviews, edits, and acts
+- System state updates in the workspace
+
+## AI Layer
+
+Current AI behavior is implemented as a deterministic mock layer so the project works without paid API usage.
+
+It simulates:
+
+- Ticket summarization
+- Suggested reply generation
+- Priority detection
+- Sentiment detection
+- Knowledge reference retrieval
+- Agent feedback loop for suggestion quality
+
+## Screenshots
+
+Recommended capture set:
 
 - Dashboard
 - Inbox
 - Ticket detail / resolution workspace
 
+## Tech Stack
+
+- Next.js
+- TypeScript
+- React
+
+## Project Structure
+
+- `src/app/dashboard` - support operations overview
+- `src/app/inbox` - AI-prioritized ticket queue
+- `src/app/ticket/[id]` - ticket resolution workspace
+- `src/app/api` - route handlers for tickets and mock AI
+- `src/lib/demo-data.ts` - demo dataset
+- `src/lib/support-engine.ts` - AI simulation logic
+
 ## Local Development
+
+Use Node 20:
+
+```bash
+source ~/.nvm/nvm.sh
+nvm use 20
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Run the app:
+
+```bash
 npm run dev
+```
 
-Open http://localhost:3000
+Open:
 
-Product Goal
+- `http://localhost:3000/dashboard`
+- `http://localhost:3000/inbox`
+- `http://localhost:3000/ticket/t-1001`
 
-Reduce support handling time and improve response consistency through AI-assisted workflows.
+## Scripts
 
-Status
+- `npm run dev` - run local development server
+- `npm run build` - production build
+- `npm run start` - run production server
+- `npm run lint` - lint checks
 
-MVP with working support flow and AI copilot experience.
+## Status
 
-Roadmap
-Real ticket ingestion (WhatsApp / email)
-Multi-agent workflows
-Policy engine integration
-Analytics and audit logs
-Multi-tenant architecture
+- Working MVP with dashboard, inbox, and ticket workflow
+- Mock AI layer implemented and exposed through API routes
+- Product realism improved with time signals, SLA risk, action feedback, and conversation thread
+- Ready for Vercel demo and portfolio screenshots
+
+## Roadmap
+
+- Real ticket ingestion (WhatsApp / email)
+- Multi-agent workflows
+- Policy engine integration
+- Analytics and audit logs
+- Multi-tenant architecture
