@@ -116,10 +116,10 @@ It simulates:
 
 ![Inbox](./public/inbox.png)
 
-### Ticket Detail
 
-![Ticket Detail](./public/ticket-detail.png)
+### Ticket Workspace
 
+![Ticket Workspace](./public/ticket-detail.png)
 
 ## Tech Stack
 
