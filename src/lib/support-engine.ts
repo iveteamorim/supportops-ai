@@ -9,6 +9,10 @@ export type TicketInsight = {
   rationale: string;
 };
 
+export type TicketRecord = Ticket & {
+  ai: TicketInsight;
+};
+
 const knowledgeBase = [
   {
     match: ["charged", "refund", "payment", "invoice", "subscription"],
@@ -141,12 +145,12 @@ export function getTicketRecord(id: string) {
   return {
     ...ticket,
     ai: generateTicketInsight(ticket),
-  };
+  } satisfies TicketRecord;
 }
 
 export function listTicketRecords() {
   return tickets.map((ticket) => ({
     ...ticket,
     ai: generateTicketInsight(ticket),
-  }));
+  })) satisfies TicketRecord[];
 }

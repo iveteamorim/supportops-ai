@@ -387,6 +387,23 @@ a {
   margin-top: 2px;
 }
 
+.signal-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.signal-pill {
+  background: rgba(14, 26, 39, 0.82);
+  border: 1px solid rgba(58, 86, 114, 0.84);
+  border-radius: 999px;
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
 .badge {
   border: 1px solid #406286;
   border-radius: 999px;
@@ -464,6 +481,11 @@ a {
   background: color-mix(in srgb, var(--danger), transparent 78%);
   border-color: #944a55;
   color: #ffd8de;
+}
+
+.button-selected {
+  border-color: #7ba9d5;
+  box-shadow: 0 0 0 4px rgba(84, 137, 188, 0.18);
 }
 
 .button-compact {
@@ -564,6 +586,73 @@ hr {
   border: 1px solid rgba(46, 73, 98, 0.78);
   border-radius: 12px;
   padding: 10px 12px;
+}
+
+.draft-input {
+  background: rgba(10, 19, 30, 0.88);
+  border: 1px solid rgba(56, 86, 113, 0.86);
+  border-radius: 14px;
+  color: var(--text);
+  font: inherit;
+  min-height: 144px;
+  outline: none;
+  padding: 14px 16px;
+  resize: vertical;
+  width: 100%;
+}
+
+.draft-input:focus {
+  border-color: #66a2d2;
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.activity-note {
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+}
+
+.activity-subnote {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 6px;
+}
+
+.activity-panel {
+  background: rgba(10, 19, 30, 0.78);
+  border: 1px solid rgba(51, 78, 103, 0.8);
+  border-radius: 14px;
+  margin-top: 12px;
+  padding: 12px 14px;
+}
+
+.thread-list {
+  display: grid;
+  gap: 12px;
+}
+
+.thread-item {
+  display: grid;
+  gap: 8px;
+}
+
+.thread-meta {
+  color: var(--muted);
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 600;
+  justify-content: space-between;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.thread-agent .message-bubble {
+  background: rgba(18, 38, 58, 0.9);
+  border-color: rgba(72, 110, 145, 0.82);
+}
+
+.thread-ai .message-bubble {
+  background: rgba(16, 32, 27, 0.92);
+  border-color: rgba(58, 111, 86, 0.84);
 }
 
 .chip-row,

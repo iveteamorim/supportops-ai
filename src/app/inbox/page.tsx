@@ -46,6 +46,8 @@ export default function InboxPage() {
             <tr>
               <th>Customer</th>
               <th>Issue summary (AI)</th>
+              <th>Wait time</th>
+              <th>SLA risk</th>
               <th>Priority</th>
               <th>Sentiment</th>
               <th>Status</th>
@@ -60,6 +62,13 @@ export default function InboxPage() {
                   <p className="cell-muted">{ticket.email}</p>
                 </td>
                 <td>{ticket.ai.summary}</td>
+                <td>
+                  <p className="cell-strong">{ticket.waitingTime}</p>
+                  <p className="cell-muted">last reply {ticket.lastReplyAt}</p>
+                </td>
+                <td>
+                  <span className={`badge badge-${ticket.slaRisk}`}>{formatLabel(ticket.slaRisk)}</span>
+                </td>
                 <td>
                   <span className={`badge badge-${ticket.ai.priority}`}>{formatLabel(ticket.ai.priority)}</span>
                 </td>
