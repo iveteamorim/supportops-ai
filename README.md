@@ -22,6 +22,33 @@ Designed to:
 - Help teams resolve urgent tickets faster
 - Reduce operational load on repetitive support work
 
+## What Makes This Different
+
+Most support tools focus on managing tickets.
+
+SupportOps AI focuses on decision-making under pressure:
+
+- prioritizing based on business risk, not just queue order
+- surfacing urgency through SLA and wait-time signals
+- augmenting agents with contextual AI, not replacing them
+
+This project is designed as an operational layer, not just a support interface.
+
+## Engineering Notes
+
+- Designed with clear separation between UI, data, and AI layers
+- Deterministic mock layer enables reproducible behavior for demos
+- State-driven UI for predictable support workflows
+
+## Path to Production
+
+This project is structured to support real integrations:
+
+- replace the mock AI layer with OpenAI or other LLM APIs
+- replace the local dataset with a database layer such as Postgres or Supabase
+- integrate real support channels such as WhatsApp, email, or web forms
+
+The current architecture is designed to transition into a production system with minimal changes.
 ## Product Walkthrough
 
 1. Open `Dashboard` to review urgent ticket volume, queue pressure, and support workload.
