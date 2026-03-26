@@ -69,11 +69,18 @@ It simulates:
 
 ## Screenshots
 
-Recommended capture set:
+### Dashboard
 
-- Dashboard
-- Inbox
-- Ticket detail / resolution workspace
+![Dashboard](./public/dashboard.png)
+
+### Inbox
+
+![Inbox](./public/inbox.png)
+
+### Ticket Detail
+
+![Ticket Detail](./public/ticket-detail.png)
+
 
 ## Tech Stack
 
