@@ -1,6 +1,6 @@
 # SupportOps AI
 
-AI-powered copilot for customer support teams.
+AI copilot for customer support teams to prioritize high-risk tickets, reduce response time, and improve decision-making under pressure.
 
 SupportOps AI helps support teams prioritize tickets, generate suggested replies, surface policy references, and reduce handling time across billing, access, and plan-change workflows.
 
@@ -22,6 +22,14 @@ Designed to:
 - Help teams resolve urgent tickets faster
 - Reduce operational load on repetitive support work
 
+## Example Impact
+
+A support team handling 50+ tickets per day can lose revenue due to slow responses and missed follow-ups.
+
+SupportOps AI surfaces high-risk tickets and reduces time-to-response, helping recover otherwise lost opportunities.
+
+
+
 ## What Makes This Different
 
 Most support tools focus on managing tickets.
@@ -33,6 +41,10 @@ SupportOps AI focuses on decision-making under pressure:
 - augmenting agents with contextual AI, not replacing them
 
 This project is designed as an operational layer, not just a support interface.
+
+## Use Case
+
+Designed for support teams handling billing issues, subscription management, and customer access requests in SaaS environments.
 
 ## Engineering Notes
 
